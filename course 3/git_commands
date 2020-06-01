@@ -1,0 +1,104 @@
+There are two main ways Git will merge branches: Fast Forward and Three way.
+Note: merge conflicts will only occur in the event of a 3-way merge. It’s not possible to have conflicting changes in a fast-forward merge. 
+
+-------------------------------
+
+git config -l
+git init
+git status
+git diff file
+git add
+git commit [-m ""]
+git log
+
+git checkout file # rollback the modified file to previous state that we are not stage untill now
+
+git reset HEAD file # it is oppisite of git add command remove the staging area for the file
+
+git commit --amend # it take all of items in staging area and update latest commit
+
+git revert HEAD # it create commit taht is opposite changes of the latest commit
+
+git revert "commit ID" # it does like above but for commit that is specified. it does not mean 
+we undo to that commit but we just undo the changes of that commit
+
+--------------------------------
+git clone URL
+git push #Git push is used to push commits from your local repo to a remote repo
+git pull #Git pull is used to fetch the newest updates from a remote repository and merge it
+git config --global credential.helper 'cache --timeout=3600' # save password in memory for 1H
+
+--------------------------------
+
+Name of remote repository is origin
+git save the remote branches like origin/master. so our local branches and remote branches that are saved locally are distinct. we can update the remote branches that save like origin/master with "git fetch" and then merge master branch and origin/master to update our local master branch.
+Note: In other words the remote branches that are saved locally are intermediary beween local repository that we clone and the remote repository.
+
+if we develope codes and push them to remote repository we should first update our local repository and then push it. to do this we can first "git fetch" and then merge it like above that I say or we can "git pull" that do it in one command.
+
+git fetch # fetch the remote copy of the current branch. for example if we on master it update origin/master
+git fetch + git merge = git pull
+
+Note: "git fetch" does not create branch locally to track remote branch that is created after we clone the repository we should create it with "git branch name origin/name" which now branch name will track origin/name.
+
+git remote update # It will update all remote branches that are saved locally like origin/master
+
+************* I do not see any difference between "git fetch" and "git remote update" until now.
+--------------------------------
+
+if we create branch and want to test it before we merge it we can push it to remote repository to test the branch by the colabrator after that can merge it with master.
+git push -u origin "branch"
+
+git rebase "branch" # update the history of current branch to make "branch" it's base.
+with rebasing we make the history linear so debugging is more comfortable.
+we should not use rebase if we want to push to reomote repository.
+
+If you need to maintain more than one version of a project at the same time, it's common practice to have the latest version of the project in the master branch and a stable version of the project on a separate branch.
+
+It's a good idea to always synchronize our local repository with reomote repository before writing new code.
+
+-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
