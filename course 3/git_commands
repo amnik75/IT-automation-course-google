@@ -59,7 +59,16 @@ It's a good idea to always synchronize our local repository with reomote reposit
 
 -------------------------------
 
+if we want to request the change for public repository that we do not have write access to it we can first make copy of it to our github account. to do this
+we should first go to that repository on github and then fork it. then we should clone it on our local computer then make new branch and make commit of new
+chnage we want on this branch and then push this branch to do remote forked repository. then we can go to the forked repository on github and choose pull
+request on this repository.
 
+we can use git rebase to squash changes and combine the commits.
+we can review code on github and make comment on pull request
+we can make issues on github to tell the bugs on codes on github.
+
+--------------------------------
 
 
 
